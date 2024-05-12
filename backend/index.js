@@ -48,7 +48,20 @@ app.get('/books', async (request, response) => {
         console.log(error.message);
         response.status(500).send({ message: error.message});
     }
-})
+});
+
+//Route to get one books from the Database using id
+
+app.get('/books/:id', async (request, response) => {
+    try {
+        const books = await Book.findByid(id);
+
+        return response.status(200).json(book);
+    } catch(error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message});
+    }
+});
 
 mongoose
     .connect(mongoDBURL)
