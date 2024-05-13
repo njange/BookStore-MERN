@@ -25,6 +25,10 @@ app.post('/books', async (request, response) => {
                 message: 'Send all required fields: title, author, publishYear',
             });
     };
+    const { title, author, publishYear } = request.body;
+
+    const newBook = { title, author, publishYear };
+
     const book = await Book.create(newBook);
     
     return response.status(201).send(book);
