@@ -25,9 +25,12 @@ app.post('/books', async (request, response) => {
                 message: 'Send all required fields: title, author, publishYear',
             });
     };
-    const { title, author, publishYear } = request.body;
-
-    const newBook = { title, author, publishYear };
+// Extract data from request body
+    const newBook = {
+        title: request.body.title,
+        author: request.body.author,
+        publishYear: request.body.publishYear,
+    };
 
     const book = await Book.create(newBook);
     
