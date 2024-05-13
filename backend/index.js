@@ -66,7 +66,7 @@ app.get('/books/:id', async (request, response) => {
 
         const { id } = request.params;
 
-        const book = await Book.findByid(id);
+        const book = await Book.findById(id);
 
         return response.status(200).json(book);
 
