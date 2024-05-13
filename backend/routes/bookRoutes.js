@@ -1,5 +1,5 @@
 import express from 'express';
-
+import { Book } from '../models/bookModel.js';
 const router =express.Router();
 
 // Route to saving a new book
@@ -112,3 +112,5 @@ router.delete('/book/:id', async (request, response) =>{
         response.status(500).send({ message: error.message});
     }
 });
+
+export default router;
