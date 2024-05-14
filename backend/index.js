@@ -15,18 +15,10 @@ app.use(express.json());
 //app.use(cors());
 
 //Option 2: Allow Custom Origins
-app.use(
-    cors({
-        origin: 'https://localhost:5000',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-    })
-);
-
-app.get('/', (request, response) => {
-    console.log(request);
-    return response.status(234).send('Welcome To MERN Stack Tutorial');
-});
+//app.get('/', (request, response) => {
+ //   console.log(request);
+ //   return response.status(234).send('Welcome To MERN Stack Tutorial');
+//});
 
 app.use('/books', bookRoute);
 
