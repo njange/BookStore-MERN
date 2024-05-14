@@ -11,7 +11,17 @@ const app = express();
 app.use(express.json());
 
 //Middleware for handling CORS policy
-app.use(cors());
+//Option 1: All all origins with Default cors(*)
+//app.use(cors());
+
+//Option 2: Allow Custom Origins
+app.use(
+    cors({
+        origin: '',
+        methods: [],
+        allowedHeaders: [],
+    })
+);
 
 app.get('/', (request, response) => {
     console.log(request);
