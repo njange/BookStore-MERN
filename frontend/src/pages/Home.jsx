@@ -31,7 +31,17 @@ const Home = () => {
                 <MdOutlineAddBox className='text-sky-800 text-4xl'/>
             </Link>
         </div>
-        {load}
+        {loading ? (
+            <Spinner />
+        ) : (
+            <table className='w-full boarder-separate border-spacing-2'>
+                <thead>
+                    <tr>
+                        <th className='boarder boarder-slate-600 rounded-md'>No</th>
+                    </tr>
+                </thead>
+            </table>
+        )}
     </div>
   )
 }
