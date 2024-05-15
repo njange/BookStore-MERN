@@ -44,6 +44,18 @@ const Home = () => {
                         <th className='border border-slate-600 rounded-md'>Operations</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {books.map((book, index) =>(
+                        <tr key={book.id} className='h-8'>
+                            <td className='border border-slate-700 rounded-md' text-center>
+                                {index +1}
+                            </td>
+                            <td className='border border-slate-700 rounded-md text-center'>
+                                
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
         )}
     </div>
