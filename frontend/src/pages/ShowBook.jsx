@@ -11,11 +11,20 @@ const ShowBook = () => {
     const { id } = useParams();
     useEffect(() =>{
         setLoading(true);
-        axios.get(`http://localhost:5000/books/${id}`)
+        axios
+        .get(`http://localhost:5000/books/${id}`)
+        .then((response) =>{
+            setBook(response.data);
+            setLoading(false);
+        })
+        .catch((error) => {
+            console.log(error)
+            setLoading(false);
+        });
 
     }, [])
 
-    
+
   return (
     <div>ShowBook</div>
   )
