@@ -9,7 +9,17 @@ const CreateBook = () => {
   const [author, setAuthor] = useState('');
   const [publishYear, setPublishYear] = useState('');
   const [loading, setLoading] = useState(false);
-  
+  const navigate = useNavigate();
+  const handleSaveBook = () => {
+    const data = {
+      title,
+      author,
+      publishYear,
+    };
+    setLoading(true);
+    axios
+      .post('http://localhost:5000/books', data)
+  }
   return (
     <div>CreateBook</div>
   )
