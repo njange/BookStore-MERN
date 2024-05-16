@@ -19,7 +19,15 @@ const CreateBook = () => {
     setLoading(true);
     axios
       .post('http://localhost:5000/books', data)
-  }
+      .then(() => {
+        setLoading(false);
+        navigate('/');
+      })
+      .catch((error) => {
+        setLoading(false);
+      });
+  };
+
   return (
     <div>CreateBook</div>
   )
