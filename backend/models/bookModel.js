@@ -1,4 +1,4 @@
-import { Timestamp } from 'mongodb';
+
 import mongoose from 'mongoose';
 
 const bookSchema = mongoose.Schema(
@@ -22,4 +22,4 @@ const bookSchema = mongoose.Schema(
     }
 )
 
-export const Book = mongoose.model('Cat',bookSchema);
+export const Book = mongoose.model('Book',bookSchema);
