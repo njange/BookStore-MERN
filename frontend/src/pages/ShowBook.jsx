@@ -43,11 +43,15 @@ const ShowBook = () => {
             </div>
             <div className='my-4'>
                 <span className='text-xl mr-4 text-gray-500'>Author</span>
-                <span>{book.publishYear}</span>
+                <span>{book.author}</span>
             </div>
             <div className='my-4'>
                 <span className='text-xl mr-4 text-gray-500'>Publish Year</span>
-                <span>{book._id}</span>
+                <span>{book.publishYear}</span>
+            </div>
+            <div className='my-4'>
+                <span className='text-xl mr-4 text-gray-500'>Create Time</span>
+                <span>{new Date(book.createdAt).toString()}</span>
             </div>
         </div>
     )}
