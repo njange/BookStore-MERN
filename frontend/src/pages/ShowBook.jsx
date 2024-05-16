@@ -26,7 +26,7 @@ const ShowBook = () => {
 
 
   return (
-    <div>ShowBook</div>
+    <div></div>
   )
 }
 
