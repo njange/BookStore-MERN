@@ -25,7 +25,7 @@ const EditBook = () => {
       console.log(error);
     });
   }, []);
-  const handleSaveBook = () => {
+  const handleEditBook = () => {
     const data = {
       title,
       author,
@@ -33,7 +33,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .post('http://localhost:5000/books', data)
+      .put(`http://localhost:5000/books/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate('/');
