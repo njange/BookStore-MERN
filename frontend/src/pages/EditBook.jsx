@@ -17,7 +17,13 @@ const EditBook = () => {
     .then((response) =>{
       setAuthor(response.data.author);
       setPublishYear(response.data.publishYear);
-    })
+      setTitle(response.data.title);
+      setLoading(false);
+    }).catch((error) => {
+      setLoading(false);
+      alert('An error happened. Please check console');
+      console.log(error);
+    });
   }, []);
   const handleSaveBook = () => {
     const data = {
