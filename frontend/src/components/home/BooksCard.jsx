@@ -17,6 +17,7 @@ const BooksCard = ({books}) => {
                 <h2 className='absolute top-1 right-2 px-4 py-1 bg-red-300 rounded-lg'>
                     {item.publishYear}
                 </h2>
+                <h4 className='my-2 text-gray-500'>
             </div>
         ))}
         </div>
