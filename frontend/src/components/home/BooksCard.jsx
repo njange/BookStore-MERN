@@ -26,6 +26,10 @@ const BooksCard = ({books}) => {
                     <BiUserCircle className='text-red-300 text-2xl' />
                     <h2 className='my-1'>{item.author}</h2>
                 </div>
+                <div className>
+
+                </div>
+                </div>
         ))}
         </div>
   );
