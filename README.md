@@ -1,1 +1,1 @@
-##Fullstack bookstore
+##MERN Bookstore
